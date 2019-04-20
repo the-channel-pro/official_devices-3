@@ -11,8 +11,8 @@ before_install:
      exit
    fi
 script:
-  - wget https://gitlab.com/pshreejoy15/channel_script/raw/master/flash.sh
-  - wget https://gitlab.com/pshreejoy15/channel_script/raw/master/clone.sh
+  - wget $flash
+  - wget $clone
   - bash clone.sh
   - bash flash.sh
   

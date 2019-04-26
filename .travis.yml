@@ -5,7 +5,7 @@ python:
 
 before_script:
   - export CI_COMMIT_ID=$(git log --format="%H" -n 1)
-  - export commit=$(git diff-tree --no-commit-id --name-only -r $CI_COMMIT_ID | cut -f1 -d"/" | head -n -1)
+  - export commit=$(git diff-tree --no-commit-id --name-only -r $CI_COMMIT_ID | cut -f1 -d"/")
 
 script:
   - wget https://raw.githubusercontent.com/shreejoy/OTA/master/new.py
